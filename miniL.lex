@@ -5,10 +5,21 @@
 %}
 
    /* some common rules */
-
+digit [0-9]
 %%
    /* specific lexer rules in regex */
-
+"+" {printf("ADD");}
+{digit}+ {printf("NUMBER");}
+"-" {printf("SUB");}
+"*" {printf("MULT");}
+"/" {printf("DIV");}
+"%" {printf("%");}
+"==" {printf("EQ");}
+"<>" {printf("NEQ");}
+"<" {printf("LT");}
+">" {printf("GT");}
+"<=" {printf("LTE");}
+">=" {printf("GTE");}
 
 
 %%
