@@ -13,14 +13,21 @@ digit [0-9]
 "-" {printf("SUB");}
 "*" {printf("MULT");}
 "/" {printf("DIV");}
-"%" {printf("%");}
+"%" {printf("MOD");}
 "==" {printf("EQ");}
 "<>" {printf("NEQ");}
 "<" {printf("LT");}
 ">" {printf("GT");}
 "<=" {printf("LTE");}
 ">=" {printf("GTE");}
-
+";" {printf("SEMICOLON");}
+":" {printf("COLON");}
+"," {printf("COMMA");}
+"(" {printf("L_PAREN");}
+")" {printf("R_PAREN");}
+"[" {printf("L_SQUARE_BRACKET");}
+"]" {printf("R_SQUARE_BRACKET");}
+":=" {printf("ASSIGN");}
 
 %%
 	/* C functions used in lexer */
