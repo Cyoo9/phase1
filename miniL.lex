@@ -66,7 +66,7 @@ _[a-zA-Z]+[a-zA-Z0-9]*  { printf("Error at line %d, column %d: identifier \"%s\"
 [a-zA-Z]+[a-zA-Z0-9]*_  { printf("Error at line %d, column %d: identifier \"%s\" cannot end with an underscore\n", lineNum, columnNum, yytext); exit(1);}
 "\n" {lineNum += 1; columnNum = 0; printf("");} 
 [!$^&_|~=`?./] {printf("Error at line %d, column %d: unrecognized symbol \"%s\"\n", lineNum, columnNum, yytext); exit(1);} 
-. {printf("");}
+[ \t] { }
 
 %%
 	/* C functions used in lexer */
